@@ -5,8 +5,8 @@ FROM python:3.10-slim-buster
 WORKDIR /app
 
 # Disable Python bytecode generation and set unbuffered mode for better Docker logging
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Copy the requirements.txt file into the container at /app
 COPY ./requirements.txt /app/requirements.txt
